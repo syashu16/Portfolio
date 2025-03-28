@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Yashu | Data Scientist & ML Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/postprocessing/EffectComposer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/postprocessing/RenderPass.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/postprocessing/ShaderPass.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/shaders/FXAAShader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/postprocessing/UnrealBloomPass.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Initializing data pipeline...</div>
+        <div class="loading-progress">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <div class="logo">YS<span class="logo-cursor">_</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch">
+                <label for="theme-switch" class="theme-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
+            <div class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <div class="canvas-container">
+            <canvas id="bg"></canvas>
+            <div class="data-stats">
+                <div class="stat-item">
+                    <div class="stat-value">85<span>%</span></div>
+                    <div class="stat-label">ML Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3<span>+</span></div>
+                    <div class="stat-label">Research Papers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">250<span>+</span></div>
+                    <div class="stat-label">DSA Problems</div>
+                </div>
+            </div>
+            <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+                <span class="tag">AI</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Data Analysis</span>
+            </div>
+        </div>
+
+        <div class="hero">
+            <div class="hero-content reveal-on-load">
+                <h3 class="pre-heading">MSc Data Science | ML Engineer</h3>
+                <h1>KUMAR YASHU</h1>
+                <h2>Transforming Data into <span class="typing-text">Insights_</span></h2>
+                
+                <p class="hero-description reveal-on-load" style="transition-delay: 0.1s;">
+                    I build intelligent systems that extract meaningful insights from complex datasets,
+                    specializing in machine learning, natural language processing, and data visualization.
+                </p>
+                
+                <div class="hero-stats reveal-on-load" style="transition-delay: 0.2s;">
+                    <div class="hero-stat">
+                        <i class="fas fa-code"></i>
+                        <span>5+ ML Models Deployed</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-database"></i>
+                        <span>3 IEEE Publications</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-award"></i>
+                        <span>250+ DSA Problems Solved</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary reveal-on-load" style="transition-delay: 0.3s;">
+                        <i class="fas fa-project-diagram"></i> View Projects
+                    </a>
+                    <a href="https://github.com/syashu16" target="_blank" class="btn secondary reveal-on-load" style="transition-delay: 0.4s;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="btn secondary resume-download reveal-on-load" style="transition-delay: 0.5s;">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <div class="terminal reveal-on-scroll">
+                            <div class="terminal-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot yellow"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-title">yashu@data-science ~ $</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="line">$ whoami</div>
+                                <div class="response">Data Scientist & ML Engineer with focus on NLP and predictive modeling</div>
+                                <div class="line">$ cat education.txt</div>
+                                <div class="response">MSc in Data Science (2024-2026) - Christ University Bengaluru<br>BTech in Computer Science (2020-2024) - Chandigarh University</div>
+                                <div class="line">$ ls publications/</div>
+                                <div class="response">ieee_blockchain_paper.pdf scopus_indexed_paper1.pdf scopus_indexed_paper2.pdf</div>
+                                <div class="line">$ ./describe_experience.sh</div>
+                                <div class="response">Developed AI-powered tools with 85% accuracy in profile matching.<br>Built automated EDA solutions reducing analysis time by 80%.<br>Created full-stack applications with Flask, React.js, and MongoDB.</div>
+                                <div class="line">$ ./current_interests.py</div>
+                                <div class="response">["Machine Learning", "Natural Language Processing", "Data Visualization", "MLOps", "Blockchain"]</div>
+                                <div class="line">$<span class="cursor">_</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image reveal-on-scroll">
+                        <div class="image-container">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="image-data-points">
+                                <div class="data-point" style="top: 20%; left: 10%;">Python</div>
+                                <div class="data-point" style="top: 30%; right: 15%;">ML</div>
+                                <div class="data-point" style="bottom: 25%; left: 15%;">NLP</div>
+                                <div class="data-point" style="bottom: 40%; right: 10%;">Data</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">Skills & Expertise</h2>
+                
+                <!-- 3D Skill Radar Chart Container -->
+                <div class="radar-chart-container reveal-on-scroll">
+                    <div id="skill-radar" class="radar-chart"></div>
+                    <div class="radar-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #4046e0;"></span>
+                            <span class="legend-text">Programming</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #17d1ac;"></span>
+                            <span class="legend-text">ML/AI</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #ff5678;"></span>
+                            <span class="legend-text">Data Eng.</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #f5a742;"></span>
+                            <span class="legend-text">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-category reveal-on-scroll">
+                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>SQL</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Java</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>R</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category reveal-on-scroll">
+                        <h3><i class="fas fa-brain"></i> ML & Data Science</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>TensorFlow</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Scikit-learn</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>NLP</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Data Analysis</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Statistical Computing</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category reveal-on-scroll">
+                        <h3><i class="fas fa-server"></i> Data Engineering</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>ETL Pipelines</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Data Cleaning</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Feature Engineering</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category reveal-on-scroll">
+                        <h3><i class="fas fa-laptop-code"></i> Software Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Flask</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Streamlit</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>React.js</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>Docker</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 82%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GitHub Contribution Graph -->
+                <div class="github-contributions reveal-on-scroll">
+                    <h3><i class="fab fa-github"></i> GitHub Contributions</h3>
+                    <div id="github-graph" class="contribution-graph"></div>
+                    <div class="contribution-legend">
+                        <div class="legend-item">
+                            <span class="legend-color level-1"></span>
+                            <span class="legend-text">No contributions</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color level-2"></span>
+                            <span class="legend-text">1-9 contributions</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color level-3"></span>
+                            <span class="legend-text">10-19 contributions</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color level-4"></span>
+                            <span class="legend-text">20+ contributions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image" data-project="jobi">
+                            <div class="project-overlay">
+                                <div class="project-tools">
+                                    <span>Python</span>
+                                    <span>NLP</span>
+                                    <span>Streamlit</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>JOBI Match</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/syashu16" target="_blank" class="project-icon">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-icon">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>AI-powered resume screening system with 85% accuracy in candidate-job matching using advanced NLP and machine learning models.</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">70%</span>
+                                    <span class="stat-label">Manual Effort ↓</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">85%</span>
+                                    <span class="stat-label">Matching Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image" data-project="edawala">
+                            <div class="project-overlay">
+                                <div class="project-tools">
+                                    <span>Python</span>
+                                    <span>Streamlit</span>
+                                    <span>AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>EDAwala</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/syashu16" target="_blank" class="project-icon">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-icon">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Automated exploratory data analysis tool that generates professional reports with AI-powered insights using Google Gemini API.</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">80%</span>
+                                    <span class="stat-label">Analysis Time ↓</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">100%</span>
+                                    <span class="stat-label">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image" data-project="bit2byte">
+                            <div class="project-overlay">
+                                <div class="project-tools">
+                                    <span>Flask</span>
+                                    <span>MongoDB</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Bit2Byte</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/syashu16" target="_blank" class="project-icon">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-icon">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Full-featured EdTech platform with role-based authentication, real-time coding practice, and interactive quiz modules.</p>
+                            <div class="project-features">
+                                <span><i class="fas fa-check-circle"></i> Role-based Auth</span>
+                                <span><i class="fas fa-check-circle"></i> Live Coding</span>
+                                <span><i class="fas fa-check-circle"></i> Interactive Quizzes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image" data-project="datadao">
+                            <div class="project-overlay">
+                                <div class="project-tools">
+                                    <span>Solidity</span>
+                                    <span>React.js</span>
+                                    <span>Filecoin VM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Data DAO Club</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/syashu16" target="_blank" class="project-icon">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-icon">
+                                        <i class="fas fa-newspaper"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Blockchain investment platform with decentralized governance system. IEEE published research validating impact in Web3 & DeFi.</p>
+                            <div class="project-publication">
+                                <i class="fas fa-award"></i>
+                                <span>Published in IEEE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive ML Model Demo -->
+                <div class="ml-demo-container reveal-on-scroll">
+                    <h3 class="demo-title"><i class="fas fa-code-branch"></i> Interactive ML Demo</h3>
+                    <div class="ml-demo">
+                        <canvas id="demo-canvas" width="600" height="400"></canvas>
+                        <div class="ml-controls">
+                            <div class="control-group">
+                                <label>Learning Rate</label>
+                                <input type="range" min="0.001" max="0.1" step="0.001" value="0.01" id="learning-rate">
+                                <span class="control-value">0.01</span>
+                            </div>
+                            <div class="control-group">
+                                <label>Epochs</label>
+                                <input type="range" min="1" max="100" step="1" value="10" id="epochs">
+                                <span class="control-value">10</span>
+                            </div>
+                            <div class="control-group">
+                                <label>Noise</label>
+                                <input type="range" min="0" max="1" step="0.01" value="0.1" id="noise">
+                                <span class="control-value">0.1</span>
+                            </div>
+                            <button id="train-model" class="btn primary">Train Model</button>
+                            <button id="reset-model" class="btn secondary">Reset</button>
+                        </div>
+                    </div>
+                    <div class="demo-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Accuracy:</span>
+                            <span class="metric-value" id="accuracy-value">0%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Loss:</span>
+                            <span class="metric-value" id="loss-value">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Iterations:</span>
+                            <span class="metric-value" id="iterations-value">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="more-projects">
+                    <a href="https://github.com/syashu16" target="_blank" class="btn secondary">See More on GitHub <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">Case Studies</h2>
+                
+                <div class="case-study reveal-on-scroll">
+                    <div class="case-header">
+                        <h3>NLP Sentiment Analysis for Product Reviews</h3>
+                        <span class="case-tag">Research Project</span>
+                    </div>
+                    
+                    <div class="case-content">
+                        <div class="case-description">
+                            <h4>The Challenge</h4>
+                            <p>Analyze 100,000+ product reviews to extract actionable insights for e-commerce clients.</p>
+                            
+                            <h4>My Approach</h4>
+                            <p>Implemented BERT-based NLP model with custom training to identify fine-grained sentiment patterns.</p>
+                            
+                            <h4>Results</h4>
+                            <ul>
+                                <li>85% accuracy in sentiment classification</li>
+                                <li>Identified 12 key product improvement areas</li>
+                                <li>Reduced manual analysis time by 70%</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-visualization">
+                            <canvas id="sentiment-viz" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="case-footer">
+                        <a href="#" class="case-link">View Research Paper</a>
+                        <a href="#" class="case-link">GitHub Repository</a>
+                        <a href="#" class="case-link">Live Demo</a>
+                    </div>
+                </div>
+                
+                <div class="case-study reveal-on-scroll">
+                    <div class="case-header">
+                        <h3>Predictive Maintenance System for Industrial Equipment</h3>
+                        <span class="case-tag">Industry Project</span>
+                    </div>
+                    
+                    <div class="case-content">
+                        <div class="case-description">
+                            <h4>The Challenge</h4>
+                            <p>Develop a system to predict equipment failures before they occur, reducing downtime and maintenance costs.</p>
+                            
+                            <h4>My Approach</h4>
+                            <p>Created an ensemble of time-series models with anomaly detection to predict failures up to 72 hours in advance.</p>
+                            
+                            <h4>Results</h4>
+                            <ul>
+                                <li>92% accuracy in failure prediction</li>
+                                <li>Reduced unplanned downtime by 65%</li>
+                                <li>Saved approximately $1.2M in maintenance costs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-visualization">
+                            <canvas id="maintenance-viz" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="case-footer">
+                        <a href="#" class="case-link">Case Study PDF</a>
+                        <a href="#" class="case-link">Algorithm Explanation</a>
+                        <a href="#" class="case-link">Demo Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">Research & Publications</h2>
+                
+                <div class="publications-grid">
+                    <div class="publication-card reveal-on-scroll">
+                        <div class="publication-meta">
+                            <span class="publication-journal">IEEE Blockchain</span>
+                            <span class="publication-date">2023</span>
+                        </div>
+                        
+                        <h3 class="publication-title">Decentralized Governance Systems for Investment Management</h3>
+                        
+                        <p class="publication-abstract">
+                            This paper presents a novel approach to decentralized autonomous investment using smart contracts on Filecoin VM.
+                        </p>
+                        
+                        <div class="publication-metrics">
+                            <div class="metric">
+                                <i class="fas fa-quote-right"></i>
+                                <span>12 Citations</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-download"></i>
+                                <span>145 Downloads</span>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">Read Paper</a>
+                            <a href="#" class="publication-link">View Code</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-card reveal-on-scroll">
+                        <div class="publication-meta">
+                            <span class="publication-journal">Scopus Indexed</span>
+                            <span class="publication-date">2022</span>
+                        </div>
+                        
+                        <h3 class="publication-title">Enhanced Feature Selection Techniques for Medical Image Classification</h3>
+                        
+                        <p class="publication-abstract">
+                            A comparative study of feature selection algorithms for improving accuracy in medical diagnostic imaging.
+                        </p>
+                        
+                        <div class="publication-metrics">
+                            <div class="metric">
+                                <i class="fas fa-quote-right"></i>
+                                <span>8 Citations</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-download"></i>
+                                <span>92 Downloads</span>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">Read Paper</a>
+                            <a href="#" class="publication-link">View Dataset</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-card reveal-on-scroll">
+                        <div class="publication-meta">
+                            <span class="publication-journal">Scopus Indexed</span>
+                            <span class="publication-date">2021</span>
+                        </div>
+                        
+                        <h3 class="publication-title">Optimizing Neural Network Architectures for Resource-Constrained Environments</h3>
+                        
+                        <p class="publication-abstract">
+                            Novel techniques for model compression and optimization enabling deployment of ML models on edge devices.
+                        </p>
+                        
+                        <div class="publication-metrics">
+                            <div class="metric">
+                                <i class="fas fa-quote-right"></i>
+                                <span>15 Citations</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-download"></i>
+                                <span>127 Downloads</span>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-links">
+                            <a href="#" class="publication-link">Read Paper</a>
+                            <a href="#" class="publication-link">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">Education & Certifications</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 - 2026</div>
+                        <div class="timeline-content">
+                            <h3>MSc in Data Science</h3>
+                            <h4>Christ University, Bengaluru</h4>
+                            <p>Specializing in advanced machine learning, statistical analysis, and big data technologies.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2020 - 2024</div>
+                        <div class="timeline-content">
+                            <h3>BTech in Computer Science Engineering</h3>
+                            <h4>Chandigarh University, Punjab</h4>
+                            <p>Graduated with 8.19 CGPA focusing on algorithms, data structures, and software development.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certifications">
+                    <h3 class="cert-heading reveal-on-scroll">Professional Certifications</h3>
+                    <div class="cert-container">
+                        <div class="cert-item reveal-on-scroll">
+                            <div class="cert-logo gcp"></div>
+                            <div class="cert-info">
+                                <h4>Google Cloud Fundamentals: Core Infrastructure</h4>
+                                <p>Google Cloud (2024)</p>
+                            </div>
+                        </div>
+                        <div class="cert-item reveal-on-scroll">
+                            <div class="cert-logo docker"></div>
+                            <div class="cert-info">
+                                <h4>Docker Foundations Professional Certificate</h4>
+                                <p>Docker (2025)</p>
+                            </div>
+                        </div>
+                        <div class="cert-item reveal-on-scroll">
+                            <div class="cert-logo meta"></div>
+                            <div class="cert-info">
+                                <h4>Programming with JavaScript</h4>
+                                <p>Meta (2024)</p>
+                            </div>
+                        </div>
+                        <div class="cert-item reveal-on-scroll">
+                            <div class="cert-logo bi"></div>
+                            <div class="cert-info">
+                                <h4>Business Intelligence & Data Analytics</h4>
+                                <p>Macquarie University (2023)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2 class="section-title reveal-on-scroll">Get In Touch</h2>
+                <div class="contact-container reveal-on-scroll">
+                    <div class="contact-info">
+                        <h3>Looking for collaboration opportunities</h3>
+                        <p>I'm available for data science projects, ML consulting, and software development opportunities. Currently interested in internships in Bangalore starting April 15th.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919905478212">+91-9905478212</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://linkedin.com/in/yashusinghdatascientist" target="_blank">linkedin.com/in/yashusinghdatascientist</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/syashu16" target="_blank">github.com/syashu16</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bengaluru, India</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/syashu16" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/yashusinghdatascientist" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-kaggle"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">KY<span class="logo-cursor">_</span></div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#case-studies">Case Studies</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Kumar Yashu. All rights reserved.
+                <div class="last-update">Last updated: March 28, 2025</div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
