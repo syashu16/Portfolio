@@ -872,5 +872,24 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Final fallback to ensure content visibility
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingScreen = document.querySelector('.loading-screen');
+                if (loadingScreen && loadingScreen.style.display !== 'none') {
+                    loadingScreen.style.display = 'none';
+                    console.log('Forced hiding of loading screen after timeout');
+                }
+                
+                // Force all content to be visible
+                document.querySelectorAll('.section, .reveal-on-load, .reveal-on-scroll').forEach(el => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                    el.classList.add('revealed');
+                });
+            }, 5000); // 5-second timeout
+        });
+    </script>
 </body>
 </html>
