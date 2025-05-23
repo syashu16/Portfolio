@@ -1,208 +1,638 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Syashu | Data Science & AIML Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Yashu - AI/ML Engineer & Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <div class="logo"><span>Syashu</span><span class="dot">.</span></div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button class="theme-toggle" id="theme-toggle" title="Toggle dark/light mode"><i class="fa fa-moon"></i></button></li>
-    </ul>
-  </nav>
-  <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-left">
-        <h1>
-          Hi, I'm Syashu <span id="typed"></span>
-        </h1>
-        <p>Masters in Data Science | BTech CSE | Data & AI Enthusiast</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn">See My Work</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar-glass">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Kumar</span>
+                <span class="logo-accent">Yashu</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <div class="hero-social">
-          <a href="https://github.com/syashu16" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/syashu16" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="hero-enhanced">
+        <div class="particles-container" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-left" data-aos="fade-right">
+                <div class="hero-badge">
+                    <i class="fas fa-code"></i>
+                    <span>Available for opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Kumar Yashu</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span id="typed"></span>
+                </h2>
+                <p class="hero-description">
+                    Transforming data into actionable insights with AI/ML. 
+                    <span class="highlight">3 Scopus publications</span>, 
+                    <span class="highlight">250+ DSA problems solved</span>, 
+                    and <span class="highlight">85% model accuracy</span> achieved.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Research Papers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">250+</span>
+                        <span class="stat-label">DSA Problems</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Model Accuracy</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-coffee"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://linkedin.com/in/yashu16" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/yashu16" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:your-email@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right" data-aos="fade-left">
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-brain"></i>
+                        <span>AI/ML</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Science</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-code"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="hero-right">
-        <canvas id="skillRadar"></canvas>
-        <div class="success-tracker">
-          <h3>Success Tracker</h3>
-          <div class="tracker-bar" title="Internships"><span style="width:80%">Internships (80%)</span></div>
-          <div class="tracker-bar" title="Certifications"><span style="width:95%">Certifications (95%)</span></div>
-          <div class="tracker-bar" title="Projects"><span style="width:90%">Projects (90%)</span></div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
-      </div>
     </section>
+
     <!-- About Section -->
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <div class="about-timeline">
-          <h3>Academic Journey</h3>
-          <ul>
-            <li><span>2024–present</span> Masters in Data Science</li>
-            <li><span>2020–2024</span> BTech in Computer Science & Engineering</li>
-            <li><span>2018–2020</span> Coding Olympiads & Early AI Projects</li>
-          </ul>
+    <section id="about" class="about-enhanced">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about turning data into actionable insights</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <div class="about-text">
+                        <p class="lead-text">
+                            I'm a passionate Data Scientist and AI/ML Engineer currently pursuing my MSc in Data Science at Christ University. 
+                            With a strong foundation in Computer Science Engineering and extensive experience in machine learning.
+                        </p>
+                        <p>
+                            My expertise spans from traditional machine learning to modern deep learning, with hands-on experience in 
+                            cloud technologies, blockchain development, and full-stack web development. I've published 3 Scopus-indexed 
+                            research papers and actively contribute to open-source projects.
+                        </p>
+                        <div class="achievements-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>MSc Data Science</h4>
+                                    <p>Christ University</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-medal"></i>
+                                <div>
+                                    <h4>5-Star Coder</h4>
+                                    <p>HackerRank Python & SQL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="skills-radar-container">
+                        <canvas id="skillRadar"></canvas>
+                    </div>
+                    <div class="certification-showcase">
+                        <h4>Recent Certifications</h4>
+                        <div class="cert-carousel">
+                            <div class="cert-item">Google Cloud Platform</div>
+                            <div class="cert-item">Docker Professional</div>
+                            <div class="cert-item">Kubernetes Engine</div>
+                            <div class="cert-item">Business Intelligence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="about-bio">
-          <p>
-            Passionate about data, algorithms, and building intelligent systems.
-            Always learning, experimenting, and exploring the world of AI, ML, and Data Science.
-          </p>
-          <ul class="about-facts">
-            <li>🚀 Exploring LLMs & GenAI</li>
-            <li>🎯 Kaggle Competitor</li>
-            <li>📚 Favorite tools: Python, PyTorch, sklearn, Plotly, FastAPI</li>
-            <li>💡 Currently learning: Multi-modal AI, Prompt Engineering</li>
-          </ul>
-        </div>
-      </div>
-      <div class="carousel-certifications">
-        <h3>Certifications & Milestones</h3>
-        <div class="carousel">
-          <div class="carousel-item">IBM Data Science Professional</div>
-          <div class="carousel-item">Microsoft AI Fundamentals</div>
-          <div class="carousel-item">DeepLearning.AI GenAI</div>
-          <div class="carousel-item">AWS ML Specialty</div>
-        </div>
-      </div>
     </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="aiml">AI/ML</button>
-        <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="research">Research</button>
-      </div>
-      <div class="project-gallery">
-        <!-- Sample Project Card -->
-        <div class="project-card" data-type="aiml">
-          <img src="images/sentiment.png" alt="Sentiment Analyzer"/>
-          <div class="project-info">
-            <h3>Sentiment Analyzer</h3>
-            <div class="badges">
-              <span>Python</span><span>scikit-learn</span><span>Flask</span>
+    <section id="projects" class="projects-enhanced">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world solutions with measurable impact</p>
             </div>
-            <p>Real-time text sentiment classification. Deployed with Flask API and Plotly viz. <span class="project-summary"></span></p>
-            <a href="https://github.com/syashu16/sentiment-analyzer" target="_blank">GitHub ↗</a>
-            <a href="https://your-demo-link" target="_blank">Live Demo</a>
-            <button class="explain-btn" data-desc="This project uses a logistic regression model to classify sentiment in text and demonstrates real-time inference via a simple web interface.">Explain My Project</button>
-          </div>
-        </div>
-        <div class="project-card" data-type="web">
-          <img src="images/eda.png" alt="EDA Automation"/>
-          <div class="project-info">
-            <h3>EDA Automation</h3>
-            <div class="badges">
-              <span>Python</span><span>Pandas</span><span>Plotly</span>
+
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="blockchain">Blockchain</button>
             </div>
-            <p>Automated exploratory data analysis tool with interactive charts. <span class="project-summary"></span></p>
-            <a href="https://github.com/syashu16/eda-automation" target="_blank">GitHub ↗</a>
-            <button class="explain-btn" data-desc="Automatically generates detailed EDA reports including distributions, correlations, and interactive Plotly visualizations.">Explain My Project</button>
-          </div>
+
+            <div class="projects-grid">
+                <!-- JOBI Match Project -->
+                <div class="project-card featured" data-type="ml" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/3a86ff/ffffff?text=JOBI+Match" alt="JOBI Match">
+                        <div class="project-badge">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">AI/ML</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">JOBI Match - AI Resume Screening</h3>
+                        <p class="project-description">
+                            AI-powered resume screening system reducing manual effort by 70% with 85% accuracy 
+                            in candidate-job matching using advanced NLP and ML models.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-number">70%</span>
+                                <span class="impact-label">Effort Reduction</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-number">85%</span>
+                                <span class="impact-label">Accuracy</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                        <button class="explain-btn" data-desc="This project uses advanced NLP techniques to match resumes with job descriptions, achieving 85% accuracy.">
+                            <i class="fas fa-robot"></i>
+                            AI Explain
+                        </button>
+                    </div>
+                </div>
+
+                <!-- EDAwala Project -->
+                <div class="project-card" data-type="ml" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/9d4edd/ffffff?text=EDAwala" alt="EDAwala">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Data Analysis</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">EDAwala - Automated EDA Tool</h3>
+                        <p class="project-description">
+                            Automated exploratory data analysis tool cutting EDA time by 80% with AI-powered 
+                            insights using Google Gemini API for anomaly detection.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-number">80%</span>
+                                <span class="impact-label">Time Saved</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Matplotlib</span>
+                        </div>
+                        <button class="explain-btn" data-desc="Automated EDA tool that generates comprehensive data analysis reports with AI-powered insights.">
+                            <i class="fas fa-robot"></i>
+                            AI Explain
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bit2Byte Project -->
+                <div class="project-card" data-type="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/21c3c3/ffffff?text=Bit2Byte" alt="Bit2Byte">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Web Development</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">Bit2Byte - EdTech Platform</h3>
+                        <p class="project-description">
+                            Full-featured EdTech platform with role-based authentication, real-time coding practice, 
+                            and interactive quiz modules using Flask and MongoDB.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                        <button class="explain-btn" data-desc="Full-stack EdTech platform with comprehensive learning management features.">
+                            <i class="fas fa-robot"></i>
+                            AI Explain
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Data DAO Project -->
+                <div class="project-card" data-type="blockchain" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=Data+DAO" alt="Data DAO">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Blockchain</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">Data DAO Club - Blockchain Platform</h3>
+                        <p class="project-description">
+                            Decentralized governance system for investment management using smart contracts 
+                            with secure data storage on Filecoin VM. Published in IEEE.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Solidity</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag">Filecoin</span>
+                        </div>
+                        <button class="explain-btn" data-desc="Blockchain-based decentralized governance platform for investment management.">
+                            <i class="fas fa-robot"></i>
+                            AI Explain
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Model Playground -->
+            <div class="model-playground" data-aos="fade-up">
+                <div class="playground-header">
+                    <h3><i class="fas fa-flask"></i> Try My ML Model</h3>
+                    <p>Test sentiment analysis in real-time</p>
+                </div>
+                <div class="playground-content">
+                    <div class="input-section">
+                        <input type="text" id="model-input" placeholder="Enter text to analyze sentiment..." class="model-input">
+                        <button onclick="runModelDemo()" class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            Analyze
+                        </button>
+                    </div>
+                    <div class="output-section">
+                        <div id="model-output" class="model-output">
+                            <i class="fas fa-brain"></i>
+                            <span>AI analysis will appear here...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Playground -->
+            <div class="code-playground-enhanced" data-aos="fade-up">
+                <div class="playground-header">
+                    <h3><i class="fas fa-code"></i> Live Code Demo</h3>
+                    <p>Try my machine learning algorithms in real-time</p>
+                    <div class="algorithm-selector">
+                        <button class="algo-btn active" data-algo="linear-regression">Linear Regression</button>
+                        <button class="algo-btn" data-algo="clustering">K-Means Clustering</button>
+                        <button class="algo-btn" data-algo="classification">Classification</button>
+                    </div>
+                </div>
+                
+                <div class="code-demo-container">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span class="file-name">ml_demo.py</span>
+                            <button class="run-btn" onclick="runCodeDemo()">
+                                <i class="fas fa-play"></i> Run Code
+                            </button>
+                        </div>
+                        <pre><code id="demo-code" class="language-python"># Linear Regression Demo
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Sample data
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 4, 6, 8, 10])
+
+# Create and train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Make prediction
+prediction = model.predict([[6]])
+print(f"Prediction for x=6: {prediction[0]:.2f}")</code></pre>
+                    </div>
+                    
+                    <div class="code-output">
+                        <div class="output-header">Output</div>
+                        <div id="code-result" class="result-area">
+                            <i class="fas fa-terminal"></i>
+                            <span>Click "Run Code" to see results...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Add more cards as needed -->
-      </div>
-      <div class="model-playground">
-        <h3>Model Playground <span class="badge">Demo</span></h3>
-        <input type="text" id="model-input" placeholder="Type text for sentiment..."/>
-        <button onclick="runModelDemo()">Analyze</button>
-        <div id="model-output"></div>
-        <small>(This is a demo. For advanced models, visit the project page.)</small>
-      </div>
     </section>
+
     <!-- Research Section -->
-    <section id="research" class="research">
-      <h2>Research & Publications</h2>
-      <div class="research-list">
-        <div class="research-item">
-          <h4>Efficient CNN for Image Classification</h4>
-          <p><strong>Published:</strong> IEEE Xplore | <strong>Year:</strong> 2024</p>
-          <p>Proposed a lightweight convolutional neural network for mobile devices. <a href="#">Read Paper</a> <a href="#">Code</a></p>
-          <details>
-            <summary>Abstract</summary>
-            <p>This research presents a novel CNN architecture optimized for speed and accuracy on edge devices.</p>
-          </details>
+    <section id="research" class="research-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Academic Work</span>
+                <h2 class="section-title">Research & Publications</h2>
+                <p class="section-subtitle">Contributing to the advancement of AI and blockchain technology</p>
+            </div>
+
+            <div class="research-stats" data-aos="fade-up">
+                <div class="research-stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Scopus Papers</span>
+                </div>
+                <div class="research-stat">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">IEEE Publication</span>
+                </div>
+                <div class="research-stat">
+                    <span class="stat-number">2024</span>
+                    <span class="stat-label">Latest Publication</span>
+                </div>
+            </div>
+
+            <div class="publications-grid">
+                <div class="publication-card featured" data-aos="fade-up">
+                    <div class="publication-badge">IEEE</div>
+                    <div class="publication-content">
+                        <h3>Data DAO Club: Blockchain Investment Platform</h3>
+                        <p class="publication-abstract">
+                            Decentralized governance system for investment management using smart contracts 
+                            with secure data storage and proof verification on Filecoin VM.
+                        </p>
+                        <div class="publication-meta">
+                            <span class="publication-year">2024</span>
+                            <span class="publication-venue">IEEE Xplore</span>
+                        </div>
+                        <div class="publication-tags">
+                            <span>Blockchain</span>
+                            <span>Smart Contracts</span>
+                            <span>DeFi</span>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-outline btn-sm">Read Paper</a>
+                            <a href="#" class="btn btn-outline btn-sm">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Add more research items -->
-      </div>
     </section>
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-      <h2>Blog</h2>
-      <div class="blog-list">
-        <article>
-          <h4>LLMs: The Future of Language Understanding</h4>
-          <p>Exploring how large language models are revolutionizing AI and data science. <a href="#">Read</a></p>
-        </article>
-        <article>
-          <h4>Agentic AI: Building Autonomous Agents</h4>
-          <p>Designing AI agents that can reason, plan, and act. <a href="#">Read</a></p>
-        </article>
-      </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-enhanced">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">NLP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-      <h2>Resume</h2>
-      <div class="resume-actions">
-        <a href="resume_syashu.pdf" download class="btn">Download PDF</a>
-        <iframe src="resume_syashu.pdf" width="100%" height="400px" title="Inline Resume"></iframe>
-      </div>
-    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form" onsubmit="return handleContact(event)">
-        <input type="text" name="name" placeholder="Your name" required/>
-        <input type="email" name="email" placeholder="Your email" required/>
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <button type="submit" class="btn">Send</button>
-        <div id="contact-success"></div>
-      </form>
-      <div class="contact-social">
-        <a href="https://github.com/syashu16" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/syashu16" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </section>
-    <!-- Metrics Dashboard -->
-    <section class="metrics">
-      <h2>Metrics Dashboard</h2>
-      <div class="metrics-widgets">
-        <iframe src="https://ghchart.rshah.org/syashu16" frameborder="0" scrolling="no" title="GitHub Contributions"></iframe>
-        <div id="dummy-model-accuracy" class="metric-card">
-          <h4>Model Accuracy</h4>
-          <div class="big-num">94.2%</div>
+    <section id="contact" class="contact-enhanced">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get in touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Always open to discussing new opportunities and interesting projects</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>your-email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/yashu16</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p>github.com/yashu16</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form onsubmit="return handleContact(event)">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="contact-success" class="contact-success"></div>
+                </div>
+            </div>
         </div>
-        <div id="project-count" class="metric-card">
-          <h4>Projects</h4>
-          <div class="big-num">12</div>
-        </div>
-      </div>
     </section>
-  </main>
-  <footer>
-    <span>© 2025 Syashu | Data Science & AIML Portfolio</span>
-  </footer>
-  <script src="portfolio.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer-enhanced">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">Kumar</span>
+                        <span class="logo-accent">Yashu</span>
+                    </div>
+                    <p>Building the future with data and AI</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/yashu16" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yashu16" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kumar Yashu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
